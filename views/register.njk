@@ -1,0 +1,54 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+<title> Register </title>
+{% endblock %}
+
+{% block content %}
+
+<div class="banner">
+    <div class="avatar"></div>
+</div>
+
+<div class="main">
+
+    <form class="regForm">
+
+           <div class="item">
+                <div class="fieldName"> Nome </div>
+                <input type="text" name="name">
+            </div>
+
+            <div class="item">    
+                <div class="fieldName"> Email</div>
+                <input type="text" name="email">
+            </div>
+
+            <div class="item">
+                <div class="fieldName">Confirme o Email </div>
+                <input type="text" name="confEmail">
+            </div>
+
+            <div class="item">
+                <div class="fieldName">Telefone</div>
+                <input type="text" name="telephone">
+            </div>
+
+            <div class="item">
+                <div class="fieldName">Sexo</div>
+                <span><input type="radio" name="gender" value= "M"> Masculino </span>
+                <span><input type="radio" name="gender" value= "F" checked> Feminino </span>
+            </div>
+
+            <div class="item">
+                <div class="fieldName">Data de Nascimento</div>
+                <input type="date" name="birthDate">
+            </div>            
+                
+            <button>Enviar</button>
+
+        </form>
+</div>
+
+
+{% endblock %}

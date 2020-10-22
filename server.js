@@ -7,8 +7,9 @@ const app = express()
 
 app.set('view engine' , 'njk')
 
-app.use(express.static('public'))
+app.use(express.static("public"))
 app.use(routes)
+app.use(express.json())
 
 nunjucks.configure("views", {
 
@@ -17,6 +18,7 @@ nunjucks.configure("views", {
     noCache:true 
 
 })
+
 
 app.listen(5000, (req,res) => {
     console.log('server is up on localhost:5000')

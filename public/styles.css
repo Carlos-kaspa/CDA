@@ -31,10 +31,6 @@ header {
     cursor: pointer;
 }
 
-.links span{
-    font-size: 3vh;
-}
-
 
 .links   {
    
@@ -50,10 +46,9 @@ body {
 
 }
 
+/* === HOME === */
 
-/* ====== CARD ======= */
-
-.card {
+.home {
 
     background: whitesmoke;
     width: 50vw;
@@ -62,6 +57,9 @@ body {
     filter: drop-shadow( 0 1vh 10px rgba(0, 0, 0, 0.5));
     display: grid;
     grid-template-columns: 2fr 3fr;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 .avatar {
@@ -73,11 +71,12 @@ body {
     /* == ANIMAÇÃO DE LOAD==*/
 
     animation-name: fadeIn;
-    animation-duration:  1s;
+    animation-duration:  1.3s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes fadeIn{
-    
+
     from {
         opacity: 0
     }
@@ -85,3 +84,144 @@ body {
         opacity: 1;
     }
 }
+
+
+/* ====== INSTRUCTOR CARD ======= */
+
+.card {
+
+    background: whitesmoke;
+    width: 50vw;
+    height: 80vh;
+    margin: 10vh auto 10vh;
+    filter: drop-shadow( 0 1vh 10px rgba(0, 0, 0, 0.5));
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.avatar {
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    background: url(https://source.unsplash.com/collection/4911432) no-repeat center center / cover;
+    
+    /* == ANIMAÇÃO DE LOAD==*/
+
+    animation-name: fadeIn;
+    animation-duration:  1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn{
+
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* == Register Page == */
+
+
+.banner{
+
+    background: whitesmoke;
+    width: 100%;
+    height: 20vh;
+    margin: 0 auto;
+
+    /* animation */
+
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.avatar {
+    
+    height: 100%;
+    width: 100%;
+    background: url(https://source.unsplash.com/collection/4911432) no-repeat center center / cover;
+    
+    /* == ANIMAÇÃO DE LOAD==*/
+
+    animation-name: fadeIn;
+    animation-duration:  1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn{
+
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.main {
+
+    margin: 0 0 0 0;
+    height: 100%;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.regForm{
+
+    grid-column: 2/3;
+}
+
+.regForm .item {
+    padding: 2vh 2vw 2vh;
+}
+
+
+
+input {
+
+    width: 100%;
+    height: 5vh;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #eee;
+  }
+
+  .item span {
+
+    height: 6vh;
+    width: 10vw;
+    line-height: 6vh;
+    font-size: 12px;
+    color: black;
+  }
+  
+ input[type="radio"] {
+
+    display: inline-block;
+    line-height: 6vh;
+    width: 4vw;
+    height: 2vh;
+   
+ }
+
+ button {
+
+    height: 5vh;
+    width: 10vw;
+    grid-column: 2/3;
+    margin: 4vh 30vw;
+ }
+
+    
+
+ 
