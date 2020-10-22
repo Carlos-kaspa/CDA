@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+header {
+
+    height: 15vh;
+    width: auto;
+    filter: drop-shadow( 0 1vh 10px black); 
+    color: whitesmoke;
+    background-color: #001B2E;   
+   
+}
+
+.links a, span{
+
+    font-size: 3vh;
+    line-height: 10vh;
+    text-decoration: none;
+    color: #FFFF;
+    font-family: 'Roboto';
+    transition: color 1s;
+}
+
+.links a:hover{
+    color:#294C60;
+    cursor: pointer;
+}
+
+.links span{
+    font-size: 3vh;
+}
+
+
+.links   {
+   
+    text-align: center;
+    line-height: 15vh;
+   
+}
+
+body {
+
+    background-color: #294C60; 
+
+
+}
+
+
+/* ====== CARD ======= */
+
+.card {
+
+    background: whitesmoke;
+    width: 50vw;
+    height: 80vh;
+    margin: 10vh auto 10vh;
+    filter: drop-shadow( 0 1vh 10px rgba(0, 0, 0, 0.5));
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.avatar {
+    grid-column: 1/2;
+    height: 100%;
+    width: 100%;
+    background: url(https://source.unsplash.com/collection/4911432) no-repeat center center / cover;
+    
+    /* == ANIMAÇÃO DE LOAD==*/
+
+    animation-name: fadeIn;
+    animation-duration:  1s;
+}
+
+@keyframes fadeIn{
+    
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}

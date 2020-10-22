@@ -5,14 +5,16 @@ const routes = require('./routes')
 
 const app = express()
 
-app.set('view engine' , 'html')
+app.set('view engine' , 'njk')
 
 app.use(express.static('public'))
 app.use(routes)
 
 nunjucks.configure("views", {
 
-    express:app
+    express:app,
+    autoescape:false,
+    noCache:true 
 
 })
 
