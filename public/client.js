@@ -1,9 +1,6 @@
-const api_url = 'http://localhost:5000/instructors';
+const api_url = 'http://localhost:5000/register';
 
 const Form = document.querySelector('.regForm') //captura a tag form, mas podia usar getelementbyclasname ou id caso quisesse.
-
-
-console.log(Form)
 
 
 Form.addEventListener('submit', (event) => {   
@@ -29,17 +26,40 @@ Form.addEventListener('submit', (event) => {
         birthDate
     }
 
-    console.log(registry)
-
+    if(dataValidation(registry)){
     //fetch para gerar um api que envie um objeto json com os posts para o servidor
-    fetch(api_url,{ 
+        fetch(api_url,{ 
 
-        method: 'POST',
-        body: JSON.stringify(registry),
-        headers: {
-            'content-type': 'application/json'
-        }
+            method: 'POST',
+            body: JSON.stringify(registry),
+            headers: {
+                'content-type': 'application/json'
+            }
 
-    })
+        }).then(response => response.json()).then(createdUser =>{
+
+            alert(` Usuário ${createdUser.name} criado!`)
+            
+            Form.reset();
+        })
+            
+       
+    }
 
 })
+
+function dataValidation(reg){
+
+    if(reg.email.toString() !== '' && reg.email.toString() == reg.confEmail.toString() ){
+        if(reg.name.toString().trim() !== ''){
+            if(reg.tel.toString().trim() !== ''){
+                if(reg.birthDate.toString().trim() !== ''){
+                    return 1;
+                }else{ alert(' Preencha a data de nascimento') }   
+            }else{ alert('Telefone é obrigatório') }
+        }else{ alert('Nome é obrigatório') } 
+    }else{
+        alert('Email e confirmação de email devem ser iguais') 
+    }
+    
+}
