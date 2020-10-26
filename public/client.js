@@ -50,14 +50,18 @@ Form.addEventListener('submit', (event) => {
 
 function dataValidation(reg){
 
-    if(reg.email.toString() !== '' && reg.email.toString() == reg.confEmail.toString() ){
-        if(reg.name.toString().trim() !== ''){
-            if(reg.tel.toString().trim() !== ''){
+    const regEx = new RegExp('/^([^0-9]*)$/')
+    const regExEmail = new RegExp("^(.*?)(\b@\b)(.*)$")
+    const regExTel = new RegExp('/^([^a-z]*)$/')
+
+    if(reg.email.toString() !== '' /*&& reg.email.toString().match(regExEmail) */&& reg.email.toString() == reg.confEmail.toString() ){ 
+        if(reg.name.toString().trim() !== '' /*&& reg.name.toString().trim().test(regEx)*/) { 
+            if(reg.tel.toString().trim() !== ''/* && reg.tel.toString().toLowerCase().test(regExTel)*/){
                 if(reg.birthDate.toString().trim() !== ''){
                     return 1;
                 }else{ alert(' Preencha a data de nascimento') }   
-            }else{ alert('Telefone é obrigatório') }
-        }else{ alert('Nome é obrigatório') } 
+            }else{ alert('Preencha o telefone corretamente') }
+        }else{ alert('Preencha o nome corretamente') } 
     }else{
         alert('Email e confirmação de email devem ser iguais') 
     }

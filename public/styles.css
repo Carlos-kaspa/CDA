@@ -60,6 +60,7 @@ body {
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    align-items: center;
 }
 
 .avatar {
@@ -84,6 +85,47 @@ body {
         opacity: 1;
     }
 }
+
+.loginBox{
+
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'roboto';
+    align-items: center ;
+    padding: 2vh;
+
+}
+
+.loginBox > #container {
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+
+.registerBox {
+   
+    margin: 5vh auto;
+    background-color: yellow;
+    border-radius: 16px;
+    width: 9vw;
+    height: 4vh;
+    text-decoration: none;
+    font-family: 'roboto';
+    font-size: 2vh;
+    line-height: 4vh;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 auto;
+    
+}
+
+.registerBox a {
+    margin: 0 0 0 2vw;
+}
+
 
 
 /* ====== INSTRUCTOR CARD ======= */
